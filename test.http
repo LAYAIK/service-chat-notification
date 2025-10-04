@@ -1,0 +1,32 @@
+POST http://localhost:3003/api/notifications/notifyUser
+Content-Type: application/json
+
+{
+  "toUserId": "8a75c738-4e32-415d-8989-b4cd46ac3668",
+  "titre": "Transfert de courrier",
+  "message": "Un nouveau courrier vous a été transféré",
+  "url": "/courrier/23422"
+}
+###
+
+POST http://localhost:3003/api/notifications/test-push
+Content-Type: application/json
+  
+  {
+    "userId": "8a75c738-4e32-415d-8989-b4cd46ac3668",
+    "title": "📬 Courrier reçu",
+    "body": "Vous avez un nouveau courrier transféré",
+    "url": "/courrier/123"
+  }
+###
+
+POST http://localhost:3003/api/notifications/notify-transfer
+Content-Type: application/json
+  
+  {
+    "userId": "8a75c738-4e32-415d-8989-b4cd46ac3668",
+    "titre": "📬 Courrier reçu",
+    "message": "Vous avez un nouveau courrier transféré",
+    "url": "/courrier/123"
+  }
+
