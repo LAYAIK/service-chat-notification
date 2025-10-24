@@ -85,6 +85,8 @@ export const notifyUserOnTransfer = async (req, res) => {
 
   try {
     const { toUserId, titre, message, url, meta } = req.body;
+    
+    console.log('nodification data', req.body);
     if (!isUUID(toUserId) || !titre || !message) {
       return res.status(400).json({ error: "toUserId (UUID), titre, message are required" });
     }
